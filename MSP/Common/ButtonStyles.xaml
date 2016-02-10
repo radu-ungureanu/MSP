@@ -1,0 +1,59 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MSP.Common">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="StandardStyles.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <!-- Custom BaseGoToButton -->
+    <Style x:Name="BaseGoToButton" 
+           TargetType="local:BaseGoToButton" 
+           BasedOn="{StaticResource WorldAppBarButtonStyle}">
+    </Style>
+    
+    <!-- Custom GoToFacebookButton -->
+    <Style TargetType="local:GoToFacebookButton" BasedOn="{StaticResource BaseGoToButton}">
+        <Setter Property="AutomationProperties.Name" Value="Facebook"/>
+        <Setter Property="Content" Value="&#xe19f;"/>
+    </Style>
+
+    <!-- Custom GoToMSPButton -->
+    <Style TargetType="local:GoToMSPButton" BasedOn="{StaticResource BaseGoToButton}">
+        <Setter Property="AutomationProperties.Name" Value="MSP UPB"/>
+    </Style>
+
+    <!-- Custom GoToImaginecupButton -->
+    <Style TargetType="local:GoToImaginecupButton" BasedOn="{StaticResource BaseGoToButton}">
+        <Setter Property="AutomationProperties.Name" Value="Imagine Cup"/>
+    </Style>
+
+    <!-- Custom GoToDreamsparkButton -->
+    <Style TargetType="local:GoToDreamsparkButton" BasedOn="{StaticResource BaseGoToButton}">
+        <Setter Property="AutomationProperties.Name" Value="Dreamspark"/>
+    </Style>
+
+    <!-- Custom GoToDreamsparkPremiumButton -->
+    <Style TargetType="local:GoToDreamsparkPremiumButton" BasedOn="{StaticResource BaseGoToButton}">
+        <Setter Property="AutomationProperties.Name" Value="Dreamspark Premium"/>
+    </Style>
+
+    <!-- Custom BaseSendMailButton -->
+    <Style x:Name="BaseSendMailButton" 
+           TargetType="local:BaseSendMailButton" 
+           BasedOn="{StaticResource MailAppBarButtonStyle}">
+    </Style>
+
+    <!-- Custom SendMailMSPButton -->
+    <Style TargetType="local:SendMailMSPButton" BasedOn="{StaticResource BaseSendMailButton}">
+    </Style>
+
+    <!-- Custom SendMailDreamsparkButton -->
+    <Style TargetType="local:SendMailDreamsparkButton" BasedOn="{StaticResource BaseSendMailButton}">
+    </Style>
+
+    <!-- Custom SendMailImaginecupButton -->
+    <Style TargetType="local:SendMailImaginecupButton" BasedOn="{StaticResource BaseSendMailButton}">
+    </Style>
+</ResourceDictionary>

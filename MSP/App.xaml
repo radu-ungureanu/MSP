@@ -1,0 +1,25 @@
+﻿<Application x:Class="MSP.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:ignore="http://www.ignore.com"
+             mc:Ignorable="d ignore"
+             xmlns:vm="using:MSP.ViewModel"
+             RequestedTheme="Light">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <!--Global View Model Locator-->
+            <vm:ViewModelLocator x:Key="Locator" d:IsDataSource="True" />
+
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Common/TimetableColors.xaml" />
+                <ResourceDictionary Source="Common/StandardStyles.xaml" />
+                <ResourceDictionary Source="Common/CustomTemplates.xaml" />
+                <ResourceDictionary Source="Common/ButtonStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

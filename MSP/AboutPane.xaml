@@ -1,0 +1,60 @@
+﻿<UserControl
+    x:Class="MSP.AboutPane"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MSP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <Border BorderBrush="Black" BorderThickness="1,0,0,0">
+        <Grid Background="White" VerticalAlignment="Stretch">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!-- HEADER -->
+            <Grid Style="{StaticResource HeaderGridStyle}" Grid.Row="0">
+                <Grid>
+                    <Grid.Transitions>
+                        <TransitionCollection>
+                            <EntranceThemeTransition FromHorizontalOffset="50" />
+                        </TransitionCollection>
+                    </Grid.Transitions>
+
+                    <StackPanel Orientation="Horizontal" Grid.Column="0" Margin="40, 32, 17, 13">
+                        <Button 
+                            x:Name="BackButton" 
+                            Margin="0,3,0,0" 
+                            Style="{StaticResource BackButtonStyle}" 
+                            Click="BackButton_Click"/>
+                        <TextBlock 
+                            Margin="10,10,0,0" 
+                            FontFamily="Segoe UI" 
+                            FontWeight="SemiLight" 
+                            FontSize="24.6667" 
+                            Text="Despre Aplicatie"/>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+
+            <!-- CONTENT AREA -->
+            <Grid Margin="40,30,25,10" VerticalAlignment="Top" Grid.Row="1">
+                <Grid.Transitions>
+                    <TransitionCollection>
+                        <EntranceThemeTransition FromHorizontalOffset="120" />
+                    </TransitionCollection>
+                </Grid.Transitions>
+
+                <TextBlock 
+                    TextWrapping="Wrap" 
+                    Style="{StaticResource SubtitleTextStyle}">
+                    Această aplicație este o prezentare a activității laboratorului Microsoft din cadrul facultății de Automatică și Calculatoare, București.
+                </TextBlock>
+            </Grid>
+        </Grid>
+    </Border>
+</UserControl>

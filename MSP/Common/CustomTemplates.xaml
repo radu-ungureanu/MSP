@@ -1,0 +1,31 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MSP.Common"
+    xmlns:personSummaryTemplate="using:MSP.Design"
+    xmlns:personTemplate="using:MSP.Design"
+    xmlns:personSnappedTemplate="using:MSP.Design"
+    xmlns:blogSummaryTemplate="using:MSP.Design"
+    xmlns:blogSnappedTemplate="using:MSP.Design">
+
+
+    <DataTemplate x:Key="PersonSummaryTemplate">
+        <personSummaryTemplate:PersonSummaryView />
+    </DataTemplate>
+    
+    <DataTemplate x:Key="PersonTemplate">
+        <personTemplate:PersonView />
+    </DataTemplate>
+
+    <DataTemplate x:Key="PersonSnappedTemplate">
+        <personSnappedTemplate:PersonSnappedView />
+    </DataTemplate>
+
+    <DataTemplate x:Key="BlogSummaryTemplate">
+        <blogSummaryTemplate:BlogSummaryView />
+    </DataTemplate>
+
+    <DataTemplate x:Key="BlogSnappedTemplate">
+        <blogSnappedTemplate:BlogSummarySnappedView />
+    </DataTemplate>
+</ResourceDictionary>
